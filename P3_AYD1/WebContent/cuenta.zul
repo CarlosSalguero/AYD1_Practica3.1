@@ -1,0 +1,71 @@
+<?page title="CUENTA BANCARIA" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window id="wcuenta" title="CUENTA BANCARIA" border="normal" apply="p3_ayd1.Cuenta" >
+<label value="Numero cuenta:  " /><label id="lbldcuenta" value="" /><separator/>
+<label value="Nombre:  " /><label id="lbldnombre" value="" /><separator/>
+<label value="Usuario:  " /><label id="lbldusuario" value="" /><separator/>
+<label value="Codigo Usuario:  " /><label id="lbldcodigo" value="" /><separator/>
+
+<tabbox orient="top" >
+	<tabs>
+		<tab label="PERFIL" />
+		<tab label="CUENTA" />
+		<tab label="CREDITO" />
+		<tab label="DEBITO" />
+	</tabs>
+	<tabpanels>
+		<tabpanel>
+			<label value="Usuario:  " /> <space width="21px" /> 
+			<textbox id="txtpUsuario" maxlength="45" disabled="true" />
+			<label value="" id="lblpUsuario" style="color:red"/>
+			<separator/>
+			
+			<label value="Nombre:  " /> <space width="21px" /> 
+			<textbox id="txtpNombre" maxlength="200"/>
+			<label value="" id="lblpNombre" style="color:red"/>
+			<separator/>
+			
+			<label value="Email:  " /> <space width="38px" /> 
+			<textbox id="txtpEmail" maxlength="45"/>
+			<label value="" id="lblpEmail" style="color:red"/>
+			<separator/>
+			
+			<label value="Contraseña:  " />
+			<textbox id="txtpContrasenia" maxlength="45"/>
+			<label value="" id="lblpContrasenia" style="color:red"/>
+			<separator/>
+			<label value="" id="lblrperfil" style="color:blue"/>
+			<separator/>
+			<button label="Guardar Perfil" id="btnPerfil"  />
+		</tabpanel>
+		
+		
+		<tabpanel  >
+			<label value="MONTO CUENTA:    " /><label id="lblmonto" value="" /><separator height="20" />
+			<label value="TRANSFERENCIAS" style="color:blue;font-size:30px;"/><separator height="20" />
+			<separator  height="10px" />
+			<label value="Numero Cuenta a Transferir: " /><textbox id="txtocuenta" /><separator height="20" />
+			<label value="Monto a Transferir: " />  <space width="66px" /> <textbox id="txtmonto" /><separator height="20" />
+			<button label="Transferir" id="btntransferir"  />
+			
+		</tabpanel>
+		
+		<tabpanel>
+			<label value="Monto a acreditar:  " /> <space width="21px" /> <textbox id="txtmacreditar" /><separator/>
+			<label value="Descripcion:  " /> <space width="61px" /> <textbox id="txtadescripcion" multiline="true"/><separator/>
+			
+			<button label="Acreditar monto" id="btnacreditar"  />
+		</tabpanel>
+		<tabpanel>
+			<label value="Monto a debitar:  " /> <space width="21px" /> <textbox id="txtmdebitar" /><separator/>
+			<label value="Descripcion:  " /> <space width="51px" /> <textbox id="txtddescripcion" multiline="true"/><separator/>
+			
+			<button label="Acreditar monto" id="btndebitar"  />
+		</tabpanel>
+		
+	</tabpanels>
+</tabbox>
+<div height="60px" ></div>
+<button id="btnsalir" label="Salir" />
+</window>
+</zk>
